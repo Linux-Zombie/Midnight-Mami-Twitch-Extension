@@ -40,7 +40,7 @@ function replaceProfilePictures() {
         element.src = 'https://i.imgur.com/odKNoQd.jpeg';
       }
     });
-  }, 1000);
+  }, 2000);
 
 
   //YouTube
@@ -50,17 +50,19 @@ function replaceProfilePictures() {
         element.src = 'https://i.imgur.com/odKNoQd.jpeg';
       }
     });
-  }, 1000);
+  }, 2000);
 	
-//TikTok
+//Tiktok
 setTimeout(() => {
   document.querySelectorAll('.e1vl87hj2 img').forEach((element) => {
     const src = element.getAttribute('src');
-    if (src && src.includes('p16-sign-useast2a.tiktokcdn.com')) {
+    const regex = /^https:\/\/p16-sign-useast2a\.tiktokcdn\.com\/.+/;
+    if (src && regex.test(src)) {
       element.src = 'https://i.imgur.com/odKNoQd.jpeg';
     }
   });
 }, 2000);
+
 
 
   //Kick
