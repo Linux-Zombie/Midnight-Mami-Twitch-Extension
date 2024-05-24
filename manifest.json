@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "MidnightMami Username & Profile Picture Replacer",
+  "version": "1.5",
+  "description": "Replaces the username 'MidnightNyx' with 'MidnightMami' on Twitch, Kick and YouTube. Also replaces the Midnights profile picture to Rhea Ripley Mami herself.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+"content_scripts": [
+    {
+      "matches": ["*://*.twitch.tv/*", "*://*.tiktok.com/*", "*://*.youtube.com/*", "*://*.kick.com/*", "*://*.linktr.ee/midnightnyxrealm/*"],
+      "js": ["content.js"]
+    }
+],
+  "icons": {
+    "48": "icon.png"
+  }
+}
